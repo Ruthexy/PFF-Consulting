@@ -95,7 +95,7 @@
   </head>
   <body class="bg-gradient-to-br from-slate-50 to-white">
   <!-- Navigation - Pure Tailwind -->
-  <nav id="navbar" class="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-sm transition-all duration-300 border-b border-gray-200">
+  <nav id="navbar" class="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-sm transition-all duration-300 border-b border-gray-800">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="flex justify-between items-center py-4">
         <!-- Logo -->
@@ -162,11 +162,13 @@
   </nav>
 
   <!-- Page Header - Pure Tailwind -->
-  <section class="bg-gradient-to-br from-slate-50 via-gray-50 to-white py-24 relative overflow-hidden">
-    <!-- Decorative elements -->
-    <div class="absolute inset-0 bg-gradient-to-r from-pff-red/5 to-transparent"></div>
-    <div class="absolute top-0 right-0 w-96 h-96 bg-pff-red/10 rounded-full blur-3xl transform translate-x-1/2 -translate-y-1/2"></div>
-    <div class="absolute bottom-0 left-0 w-80 h-80 bg-pff-red/5 rounded-full blur-2xl transform -translate-x-1/2 translate-y-1/2"></div>
+  <section class="py-24 relative overflow-hidden bg-gradient-to-br from-pff-red/10 via-pff-red/5 to-transparent overflow-hidden">
+    <!-- Animated background elements -->
+    <div class="absolute inset-0 bg-gradient-to-r from-pff-red/5 to-transparent">
+      <div class="absolute top-0 left-0 w-96 h-96 bg-pff-red/10 rounded-full blur-3xl animate-pulse"></div>
+      <div class="absolute bottom-0 right-0 w-80 h-80 bg-pff-red/5 rounded-full blur-2xl animate-pulse delay-1000"></div>
+      <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-64 h-64 bg-pff-red/10 rounded-full blur-xl animate-pulse delay-500"></div>
+    </div>
     
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
       <div class="max-w-4xl py-20">

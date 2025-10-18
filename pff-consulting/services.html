@@ -2,31 +2,27 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Services - PFF Consulting</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
+  <title>Services – PFF Consulting</title>
   <meta name="description" content="Explore PFF Consulting's comprehensive forensic and financial consulting services including forensic accounting, financial analysis, project governance, and data analytics.">
   <meta name="keywords" content="forensic consulting services, financial consulting, project governance, data analytics, forensic accounting, financial analysis">
-  
-  <!-- Open Graph Meta Tags -->
-  <meta property="og:title" content="Services - PFF Consulting">
-  <meta property="og:description" content="Explore our comprehensive forensic and financial consulting services for government and private sector organizations.">
+
+  <!-- Open Graph / Twitter -->
+  <meta property="og:title" content="Services – PFF Consulting">
+  <meta property="og:description" content="Explore our comprehensive forensic and financial consulting services for government and private sector organisations.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://pffconsulting.com/services.html">
   <meta property="og:image" content="https://pffconsulting.com/images/services-og-image.jpg">
-  
-  <!-- Twitter Card Meta Tags -->
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Services - PFF Consulting">
-  <meta name="twitter:description" content="Explore our comprehensive forensic and financial consulting services for government and private sector organizations.">
-  <meta name="twitter:image" content="https://pffconsulting.com/images/services-twitter-image.jpg">
-  
+
   <!-- Favicon -->
-  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%239E060C'/><text x='50' y='65' text-anchor='middle' fill='white' font-family='Arial' font-size='40' font-weight='bold'>PFF</text></svg>">
-  
+  <link rel="icon" type="image/svg+xml"
+        href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='20' fill='%239E060C'/%3E%3Ctext x='50' y='65' text-anchor='middle' fill='white' font-family='Arial' font-size='40' font-weight='bold'%3EPFF%3C/text%3E%3C/svg%3E">
+
   <!-- Tailwind CSS -->
   <script src="https://cdn.tailwindcss.com"></script>
-  
-  <!-- Custom Tailwind Configuration -->
+
+  <!-- Tailwind config -->
   <script>
     tailwind.config = {
       theme: {
@@ -45,104 +41,193 @@
       }
     }
   </script>
-  
+
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800&family=Merriweather:wght@400&display=swap" rel="stylesheet">
-  
-  <!-- Pure Tailwind CSS - No Custom Styles -->
+
+  <!-- 3-line safety net for very small devices -->
   <style>
-    /* Essential base styles only - everything else uses Tailwind classes */
-    html {
-      scroll-behavior: smooth;
-    }
-    
-    body {
-      font-family: 'Inter', sans-serif;
-      color: #292929;
-      -webkit-font-smoothing: antialiased;
-      -moz-osx-font-smoothing: grayscale;
-    }
-    
-    h1, h2, h3, h4, h5, h6 {
-      font-family: 'Inter', sans-serif;
-      font-weight: 700;
+    html { scroll-behavior: smooth; }
+    body { font-family: 'Inter', sans-serif; color: #292929; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
+    /* Prevent horizontal overflow on ultra-narrow screens */
+    @media (max-width: 390px) {
+      body { overflow-x: hidden; }
+      img { max-width: 100%; }
     }
   </style>
 </head>
-<body class="bg-gradient-to-br from-slate-900 via-gray-900 to-black text-white">
+<body class="bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-50">
   <!-- Navigation - Pure Tailwind Dark Theme -->
-  <nav id="navbar" class="fixed top-0 left-0 right-0 z-50 bg-gradient-to-br from-slate-900 via-gray-900 to-black backdrop-blur-lg transition-all duration-300 border-b border-gray-800">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="flex justify-between items-center py-4">
-        <!-- Logo -->
-        <a href="/" class="inline-flex items-center space-x-2 group">
-  <img
-    src="./assets/Pearl_logo.png"
-    alt="Website Logo"
-    class="w-24 h-24 object-contain bg-white transition-transform duration-300 group-hover:scale-105"
-  />
- 
-        <!-- Desktop Navigation -->
-        <div class="hidden lg:flex items-center space-x-8">
-          <a href="index.html" class="text-white hover:text-pff-black transition-colors duration-300 font-medium">Home</a>
-          <a href="about.html" class="text-white hover:text-pff-black transition-colors duration-300 font-medium">About</a>
-          <a href="services.html" class="text-white font-medium border-b-2 border-pff-red">Services</a>
-          <a href="sectors.html" class="text-white hover:text-pff-black transition-colors duration-300 font-medium">Sectors</a>
-          <a href="projects.html" class="text-white hover:text-pff-black transition-colors duration-300 font-medium">Projects</a>
-          <a href="insights.html" class="text-white hover:text-pff-black transition-colors duration-300 font-medium">Insights</a>
-          <a href="careers.html" class="text-white hover:text-pff-black transition-colors duration-300 font-medium">Careers</a>
-          <a href="contact.html" class="bg-pff-red text-white px-6 py-2 rounded-lg font-semibold hover:bg-red-700 transition-colors duration-300">Contact Us</a>
-        </div>
+  <nav
+  id="navbar"
+  class="fixed top-0 left-0 right-0 z-50 bg-white border-b border-blue-100 shadow-sm transition-all duration-300"
+>
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex justify-between items-center py-4">
+      <!-- Logo -->
+      <a href="/" class="inline-flex items-center space-x-2 group">
+        <img
+          src="./assets/Pearl_logo.png"
+          alt="Website Logo"
+          class="w-24 h-24 object-contain transition-transform duration-300 group-hover:scale-105"
+        />
+      </a>
 
-        <!-- Mobile Menu Button -->
-        <button id="mobile-menu-btn" class="lg:hidden p-2 rounded-lg hover:bg-gray-800 transition-colors duration-300">
-          <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+      <!-- Desktop Navigation -->
+      <div class="hidden lg:flex items-center space-x-8">
+        <a
+          href="index.html"
+          class="text-gray-700 hover:text-pff-red transition-colors duration-300 font-medium"
+          >Home</a
+        >
+        <a
+          href="about.html"
+          class="text-gray-700 hover:text-pff-red transition-colors duration-300 font-medium"
+          >About</a
+        >
+        <a
+          href="services.html"
+          class="text-gray-700 hover:text-pff-red transition-colors duration-300 font-medium"
+          >Services</a
+        >
+        <a
+          href="sectors.html"
+          class="text-gray-700 hover:text-pff-red transition-colors duration-300 font-medium"
+          >Sectors</a
+        >
+        <a
+          href="projects.html"
+          class="text-gray-700 hover:text-pff-red transition-colors duration-300 font-medium"
+          >Projects</a
+        >
+        <a
+          href="insights.html"
+          class="text-gray-700 hover:text-pff-red transition-colors duration-300 font-medium"
+          >Insights</a
+        >
+        <a
+          href="careers.html"
+          class="text-gray-700 hover:text-pff-red transition-colors duration-300 font-medium"
+          >Careers</a
+        >
+        <a
+          href="contact.html"
+          class="bg-pff-red text-white px-6 py-2 rounded-lg font-semibold hover:bg-red-700 transition-colors duration-300"
+          >Contact Us</a
+        >
+      </div>
+
+      <!-- Mobile Menu Button -->
+      <button
+        id="mobile-menu-btn"
+        class="lg:hidden p-2 rounded-lg hover:bg-gray-100 transition-colors duration-300"
+      >
+        <svg
+          class="w-6 h-6"
+          fill="none"
+          stroke="currentColor"
+          viewBox="0 0 24 24"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M4 6h16M4 12h16M4 18h16"
+          ></path>
+        </svg>
+      </button>
+    </div>
+  </div>
+
+  <!-- Mobile Menu -->
+  <div
+    id="mobile-menu"
+    class="fixed inset-0 z-40 bg-white transform transition-transform duration-300 ease-in-out translate-x-full"
+  >
+    <div
+      class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 bg-gradient-to-br from-pff-red via-gray-100 to-pff-grey"
+    >
+      <div class="flex justify-between items-center mb-8">
+        <a href="/" class="inline-flex items-center space-x-2 group">
+          <img
+            src="./assets/Pearl_logo.png"
+            alt="Website Logo"
+            class="w-24 h-24 object-contain transition-transform duration-300 group-hover:scale-105"
+          />
+        </a>
+        <button
+          id="close-menu-btn"
+          class="p-2 rounded-lg hover:bg-gray-100 transition-colors duration-300"
+        >
+          <svg
+            class="w-6 h-6"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M6 18L18 6M6 6l12 12"
+            ></path>
           </svg>
         </button>
       </div>
-    </div>
 
-    <!-- Mobile Menu -->
-    <div id="mobile-menu" class="fixed inset-0 z-40 bg-black transform transition-transform duration-300 ease-in-out translate-x-full">
-      <div class="max-w-7xl mx-auto px-4 bg-gradient-to-br from-pff-red via-grey-light to-pff-grey lg:px-8 py-8">
-        <div class="flex justify-between items-center mb-8">
-          <a href="index.html" class="flex items-center space-x-3">
-            <a href="/" class="inline-flex items-center space-x-2 group">
-  <img
-    src="./assets/Pearl_logo.png"
-    alt="Website Logo"
-    class="w-24 h-24 object-contain transition-transform duration-300 group-hover:scale-105"
-  />
- 
-          </a>
-          <button id="close-menu-btn" class="p-2 rounded-lg hover:bg-gray-800 transition-colors duration-300">
-            <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
-            </svg>
-          </button>
-        </div>
-        
-        <div class="space-y-6">
-          <a href="index.html" class="block text-xl font-medium text-white hover:text-white transition-colors duration-300">Home</a>
-          <a href="about.html" class="block text-xl font-medium text-white hover:text-white transition-colors duration-300">About</a>
-          <a href="services.html" class="block text-xl font-medium text-white border-l-4 border-pff-red pl-4">Services</a>
-          <a href="sectors.html" class="block text-xl font-medium text-white hover:text-white transition-colors duration-300">Sectors</a>
-          <a href="projects.html" class="block text-xl font-medium text-white hover:text-white transition-colors duration-300">Projects</a>
-          <a href="insights.html" class="block text-xl font-medium text-white hover:text-white transition-colors duration-300">Insights</a>
-          <a href="careers.html" class="block text-xl font-medium text-white hover:text-white transition-colors duration-300">Careers</a>
-          <a href="contact.html" class="bg-pff-red text-pff-red px-6 py-2 rounded-lg font-semibold hover:bg-white transition-colors duration-300 inline-block">Contact Us</a>
-        </div>
+      <div class="space-y-6">
+        <a
+          href="index.html"
+          class="block text-xl font-medium text-white hover:text-pff-red transition-colors duration-300"
+          >Home</a
+        >
+        <a
+          href="about.html"
+          class="block text-xl font-medium text-white hover:text-pff-red transition-colors duration-300"
+          >About</a
+        >
+        <a
+          href="services.html"
+          class="block text-xl font-medium text-white hover:text-pff-red transition-colors duration-300"
+          >Services</a
+        >
+        <a
+          href="sectors.html"
+          class="block text-xl font-medium text-white hover:text-pff-red transition-colors duration-300"
+          >Sectors</a
+        >
+        <a
+          href="projects.html"
+          class="block text-xl font-medium text-white hover:text-pff-red transition-colors duration-300"
+          >Projects</a
+        >
+        <a
+          href="insights.html"
+          class="block text-xl font-medium text-white hover:text-pff-red transition-colors duration-300"
+          >Insights</a
+        >
+        <a
+          href="careers.html"
+          class="block text-xl font-medium text-white hover:text-pff-red transition-colors duration-300"
+          >Careers</a
+        >
+        <a
+          href="contact.html"
+          class="bg-pff-red text-white px-6 py-2 rounded-lg font-semibold hover:bg-red-700 transition-colors duration-300 inline-block"
+          >Contact Us</a
+        >
       </div>
     </div>
-  </nav>
+  </div>
+</nav>
+
 
   <!-- Page Header - Pure Tailwind Modern Tech -->
-  <section class="py-32 relative overflow-hidden bg-gradient-to-br from-slate-900 via-gray-900 to-black">
+  <section class="py-24 relative overflow-hidden bg-gradient-to-br from-pff-red/10 via-pff-red/5 to-transparent overflow-hidden">
     <!-- Animated background elements -->
-    <div class="absolute inset-0">
+    <div class="absolute inset-0 bg-gradient-to-r from-pff-red/5 to-transparent">
       <div class="absolute top-0 left-0 w-96 h-96 bg-pff-red/10 rounded-full blur-3xl animate-pulse"></div>
       <div class="absolute bottom-0 right-0 w-80 h-80 bg-pff-red/5 rounded-full blur-2xl animate-pulse delay-1000"></div>
       <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-64 h-64 bg-pff-red/10 rounded-full blur-xl animate-pulse delay-500"></div>
@@ -150,12 +235,12 @@
     
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
       <div class="max-w-4xl py-20">
-        <h1 class="text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight">
+        <h1 class="text-4xl sm:text-5xl lg:text-6xl font-bold text-pff-black mb-6 leading-tight">
           Expertise that Transforms 
           <span class="text-pff-red">Insight</span> into 
           <span class="text-pff-red">Action</span>
         </h1>
-        <p class="text-xl text-gray-400 leading-relaxed font-light max-w-3xl">
+        <p class="text-xl text-gray-600 leading-relaxed font-light max-w-3xl">
           We help organizations strengthen financial integrity, institutional capacity, and operational performance through evidence-based consulting and disciplined execution.
         </p>
       </div>
@@ -163,13 +248,13 @@
   </section>
 
   <!-- Services Overview - Pure Tailwind Modern Tech -->
-  <section class="py-20 lg:py-32 bg-gradient-to-br from-gray-900 to-slate-800">
+  <section class="py-24 px-10 bg-gradient-to-br from-slate-100 via-gray-50 to-white>
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="text-center mb-24">
-        <h2 class="text-4xl lg:text-5xl font-bold text-white mb-8 leading-tight">
+        <h2 class="text-4xl lg:text-5xl font-bold text-pff-black mb-8 leading-tight">
           Comprehensive Consulting Solutions
         </h2>
-        <p class="text-lg text-gray-400 max-w-3xl mx-auto leading-relaxed">
+        <p class="text-lg text-gray-600 max-w-3xl mx-auto leading-relaxed">
           At Pearl Forensic & Financial Consulting (PFF Consulting), we deliver solutions that combine forensic precision, strategic foresight, and governance discipline.
 Our consultants work alongside clients to address complex financial, organizational, and regulatory challenges — ensuring every engagement delivers clarity, compliance, and measurable value.
 Our core service lines reflect an integrated approach to financial governance and institutional strengthening.
@@ -187,9 +272,9 @@ Our core service lines reflect an integrated approach to financial governance an
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path>
                 </svg>
               </div>
-            <h3 class="text-3xl lg:text-4xl font-bold text-white leading-tight">Forensic and Financial Consulting</h3>
+            <h3 class="text-3xl lg:text-4xl font-bold text-pff-black leading-tight">Forensic and Financial Consulting</h3>
             </div>
-            <p class="text-gray-300 text-lg leading-relaxed">
+            <p class="text-gray-600 text-lg leading-relaxed">
               Our forensic and financial consulting practice provides rigorous analysis and independent assurance across accounting, compliance, and financial control environments.
 We support organizations in identifying irregularities, preventing financial mismanagement, and improving the credibility of their financial systems.
 
@@ -199,48 +284,48 @@ We support organizations in identifying irregularities, preventing financial mis
               <div class="flex items-start group">
                 <div class="w-3 h-3 bg-pff-red rounded-full mt-2 mr-4 flex-shrink-0 group-hover:scale-125 transition-transform duration-300"></div>
                 <div>
-                  <h4 class="text-lg font-semibold text-white mb-2">Forensic Audits & Investigations</h4>
-                  <p class="text-gray-400 text-lg leading-relaxed">Identify, document, and resolve incidents of financial irregularity or fraud.</p>
+                  <h4 class="text-lg font-semibold text-pff-black mb-2">Forensic Audits & Investigations</h4>
+                  <p class="text-gray-600 text-lg leading-relaxed">Identify, document, and resolve incidents of financial irregularity or fraud.</p>
                 </div>
               </div>
               <div class="flex items-start group">
                 <div class="w-3 h-3 bg-pff-red rounded-full mt-2 mr-4 flex-shrink-0 group-hover:scale-125 transition-transform duration-300"></div>
                 <div>
-                  <h4 class="text-lg font-semibold text-white mb-2">Financial Due Diligence</h4>
-                  <p class="text-gray-400 text-lg leading-relaxed">Assess accuracy, reliability, and sustainability of financial records for investments or mergers.
+                  <h4 class="text-lg font-semibold text-pff-black mb-2">Financial Due Diligence</h4>
+                  <p class="text-gray-600 text-lg leading-relaxed">Assess accuracy, reliability, and sustainability of financial records for investments or mergers.
 </p>
                 </div>
               </div>
               <div class="flex items-start group">
                 <div class="w-3 h-3 bg-pff-red rounded-full mt-2 mr-4 flex-shrink-0 group-hover:scale-125 transition-transform duration-300"></div>
                 <div>
-                  <h4 class="text-lg font-semibold text-white mb-2">Asset Tracing & Recovery</h4>
-                  <p class="text-gray-400 text-lg leading-relaxed">Track, analyze, and recover misappropriated or hidden assets</p>
+                  <h4 class="text-lg font-semibold text-pff-black mb-2">Asset Tracing & Recovery</h4>
+                  <p class="text-gray-600 text-lg leading-relaxed">Track, analyze, and recover misappropriated or hidden assets</p>
                 </div>
               </div>
               <div class="flex items-start group">
                 <div class="w-3 h-3 bg-pff-red rounded-full mt-2 mr-4 flex-shrink-0 group-hover:scale-125 transition-transform duration-300"></div>
                 <div>
-                  <h4 class="text-lg font-semibold text-white mb-2">Internal Control Reviews</h4>
-                  <p class="text-gray-400 text-lg leading-relaxed">Evaluate control frameworks and recommend improvements to prevent future breaches</p>
+                  <h4 class="text-lg font-semibold text-pff-black mb-2">Internal Control Reviews</h4>
+                  <p class="text-gray-600 text-lg leading-relaxed">Evaluate control frameworks and recommend improvements to prevent future breaches</p>
                 </div>
               </div>
             </div>
 
             
-            <p class="text-gray-400 text-lg italic">Clients gain confidence in their financial systems, protect their reputation, and reinforce accountability</p>
+            <p class="text-gray-600 text-lg italic">Clients gain confidence in their financial systems, protect their reputation, and reinforce accountability</p>
 
             <a href="contact.html" class="bg-pff-red text-white px-8 py-4 rounded-xl font-semibold hover:bg-red-700 transition-all duration-300 transform hover:scale-105 inline-block">Discuss Your Case</a>
           </div>
           <div class="relative">
-            <div class="bg-gradient-to-br from-gray-800 to-gray-900 rounded-3xl p-8 shadow-2xl border border-gray-700">
+            <div class="bg-gradient-to-br from-pff-red/10 via-pff-red/5 to-transparent rounded-3xl p-8 shadow-2xl border border-gray-700">
               <svg class="w-full h-auto" viewBox="0 0 400 300" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <rect x="50" y="50" width="300" height="200" rx="20" fill="#1f2937" stroke="#9E060C" stroke-width="2"/>
+                <rect x="50" y="50" width="300" height="200" rx="20" fill="#F5F5F5" stroke="#9E060C" stroke-width="2"/>
                 <circle cx="150" cy="120" r="20" fill="#9E060C" opacity="0.3"/>
                 <circle cx="250" cy="180" r="15" fill="#9E060C" opacity="0.5"/>
                 <path d="M100 100 L200 150 L280 120" stroke="#9E060C" stroke-width="3" fill="none"/>
-                <rect x="80" y="80" width="40" height="30" rx="5" fill="#374151" stroke="#9E060C" stroke-width="1"/>
-                <rect x="180" y="130" width="40" height="30" rx="5" fill="#374151" stroke="#9E060C" stroke-width="1"/>
+                <rect x="80" y="80" width="40" height="30" rx="5" fill="#F5F5F5" stroke="#9E060C" stroke-width="1"/>
+                <rect x="180" y="130" width="40" height="30" rx="5" fill="#F5F5F5" stroke="#9E060C" stroke-width="1"/>
                 <text x="200" y="240" text-anchor="middle" class="text-white text-sm font-semibold">Forensic Analysis</text>
               </svg>
             </div>
@@ -258,9 +343,9 @@ We support organizations in identifying irregularities, preventing financial mis
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
                 </svg>
               </div>
-            <h3 class="text-3xl lg:text-4xl font-bold text-white leading-tight">Financial Consulting</h3>
+            <h3 class="text-3xl lg:text-4xl font-bold text-pff-black leading-tight">Financial Consulting</h3>
             </div>
-            <p class="text-gray-300 text-lg leading-relaxed">
+            <p class="text-gray-600 text-lg leading-relaxed">
               We provide strategic financial consulting services that help organizations optimize 
               their financial performance, manage risks, and make informed investment decisions.
             </p>
@@ -269,52 +354,52 @@ We support organizations in identifying irregularities, preventing financial mis
               <div class="flex items-start group">
                 <div class="w-3 h-3 bg-pff-red rounded-full mt-2 mr-4 flex-shrink-0 group-hover:scale-125 transition-transform duration-300"></div>
                 <div>
-                  <h4 class="text-lg font-semibold text-white mb-2">Financial Analysis & Planning</h4>
-                  <p class="text-gray-400 text-lg leading-relaxed">Strategic financial planning and performance analysis</p>
+                  <h4 class="text-lg font-semibold text-pff-black mb-2">Financial Analysis & Planning</h4>
+                  <p class="text-gray-600 text-lg leading-relaxed">Strategic financial planning and performance analysis</p>
                 </div>
               </div>
               <div class="flex items-start group">
                 <div class="w-3 h-3 bg-pff-red rounded-full mt-2 mr-4 flex-shrink-0 group-hover:scale-125 transition-transform duration-300"></div>
                 <div>
-                  <h4 class="text-lg font-semibold text-white mb-2">Risk Assessment & Management</h4>
-                  <p class="text-gray-400 text-lg leading-relaxed">Comprehensive risk identification and mitigation strategies</p>
+                  <h4 class="text-lg font-semibold text-pff-black mb-2">Risk Assessment & Management</h4>
+                  <p class="text-gray-600 text-lg leading-relaxed">Comprehensive risk identification and mitigation strategies</p>
                 </div>
               </div>
               <div class="flex items-start group">
                 <div class="w-3 h-3 bg-pff-red rounded-full mt-2 mr-4 flex-shrink-0 group-hover:scale-125 transition-transform duration-300"></div>
                 <div>
-                  <h4 class="text-lg font-semibold text-white mb-2">Investment Advisory</h4>
-                  <p class="text-gray-400 text-lg leading-relaxed">Strategic investment planning and portfolio optimization</p>
+                  <h4 class="text-lg font-semibold text-pff-black mb-2">Investment Advisory</h4>
+                  <p class="text-gray-600 text-lg leading-relaxed">Strategic investment planning and portfolio optimization</p>
                 </div>
               </div>
               <div class="flex items-start group">
                 <div class="w-3 h-3 bg-pff-red rounded-full mt-2 mr-4 flex-shrink-0 group-hover:scale-125 transition-transform duration-300"></div>
                 <div>
-                  <h4 class="text-lg font-semibold text-white mb-2">Financial Modeling</h4>
-                  <p class="text-gray-400 text-lg leading-relaxed">Advanced financial models and scenario analysis</p>
+                  <h4 class="text-lg font-semibold text-pff-black mb-2">Financial Modeling</h4>
+                  <p class="text-gray-600 text-lg leading-relaxed">Advanced financial models and scenario analysis</p>
                 </div>
               </div>
             </div>
 
             <div class="grid grid-cols-2 gap-6">
-              <div class="text-center p-6 bg-gradient-to-br from-gray-800 to-gray-900 rounded-2xl border border-gray-700 group hover:border-pff-red transition-colors duration-300">
+              <div class="text-center p-6 bg-gradient-to-br from-pff-red/10 via-pff-red/5 to-transparent rounded-2xl border border-gray-700 group hover:border-pff-red transition-colors duration-300">
                 <div class="text-3xl font-bold text-pff-red mb-2">40%</div>
-                <div class="text-sm text-gray-400">Revenue Increase</div>
+                <div class="text-sm text-gray-600">Revenue Increase</div>
               </div>
-              <div class="text-center p-6 bg-gradient-to-br from-gray-800 to-gray-900 rounded-2xl border border-gray-700 group hover:border-pff-red transition-colors duration-300">
+              <div class="text-center p-6 bg-gradient-to-br from-pff-red/10 via-pff-red/5 to-transparent rounded-2xl border border-gray-700 group hover:border-pff-red transition-colors duration-300">
                 <div class="text-3xl font-bold text-pff-red mb-2">25%</div>
-                <div class="text-sm text-gray-400">Debt Reduction</div>
+                <div class="text-sm text-gray-600">Debt Reduction</div>
               </div>
             </div>
 
             <a href="contact.html" class="bg-pff-red text-white px-8 py-4 rounded-xl font-semibold hover:bg-red-700 transition-all duration-300 transform hover:scale-105 inline-block">Optimize Your Finances</a>
           </div>
           <div class="lg:order-1 relative">
-            <div class="bg-gradient-to-br from-gray-800 to-gray-900 rounded-3xl p-8 shadow-2xl border border-gray-700">
+            <div class="bg-gradient-to-br from-pff-red/10 via-pff-red/5 to-transparent rounded-3xl p-8 shadow-2xl border border-gray-700">
               <svg class="w-full h-auto" viewBox="0 0 400 300" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <rect x="50" y="50" width="300" height="200" rx="20" fill="#1f2937" stroke="#9E060C" stroke-width="2"/>
-                <rect x="100" y="100" width="80" height="60" rx="5" fill="#374151" stroke="#9E060C" stroke-width="1"/>
-                <rect x="220" y="120" width="80" height="60" rx="5" fill="#374151" stroke="#9E060C" stroke-width="1"/>
+                <rect x="50" y="50" width="300" height="200" rx="20" fill="#F5F5F5" stroke="#9E060C" stroke-width="2"/>
+                <rect x="100" y="100" width="80" height="60" rx="5" fill="#F5F5F5" stroke="#9E060C" stroke-width="1"/>
+                <rect x="220" y="120" width="80" height="60" rx="5" fill="#F5F5F5" stroke="#9E060C" stroke-width="1"/>
                 <path d="M180 130 L220 150" stroke="#9E060C" stroke-width="2" marker-end="url(#arrowhead2)"/>
                 <defs>
                   <marker id="arrowhead2" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
@@ -338,9 +423,9 @@ We support organizations in identifying irregularities, preventing financial mis
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"></path>
                 </svg>
               </div>
-            <h3 class="text-3xl lg:text-4xl font-bold text-white leading-tight">Project Governance and Advisory</h3>
+            <h3 class="text-3xl lg:text-4xl font-bold text-pff-black leading-tight">Project Governance and Advisory</h3>
             </div>
-            <p class="text-gray-300 text-lg leading-relaxed">
+            <p class="text-gray-600 text-lg leading-relaxed">
               Effective governance transforms projects from plans into results.
 Our Project Governance & Advisory service helps clients manage multi-sector programs with precision — ensuring transparency, efficiency, and compliance throughout the project lifecycle.
 
@@ -350,8 +435,8 @@ Our Project Governance & Advisory service helps clients manage multi-sector prog
               <div class="flex items-start group">
                 <div class="w-3 h-3 bg-pff-red rounded-full mt-2 mr-4 flex-shrink-0 group-hover:scale-125 transition-transform duration-300"></div>
                 <div>
-                  <h4 class="text-lg font-semibold text-white mb-2">Procurement Governance</h4>
-                  <p class="text-gray-400 text-lg leading-relaxed">Develop processes that ensure due diligence, value-for-money, and compliance with regulations.
+                  <h4 class="text-lg font-semibold text-pff-black mb-2">Procurement Governance</h4>
+                  <p class="text-gray-600 text-lg leading-relaxed">Develop processes that ensure due diligence, value-for-money, and compliance with regulations.
 
 </p>
                 </div>
@@ -359,39 +444,39 @@ Our Project Governance & Advisory service helps clients manage multi-sector prog
               <div class="flex items-start group">
                 <div class="w-3 h-3 bg-pff-red rounded-full mt-2 mr-4 flex-shrink-0 group-hover:scale-125 transition-transform duration-300"></div>
                 <div>
-                  <h4 class="text-lg font-semibold text-white mb-2">Performance Monitoring & Evaluation (M&E)</h4>
-                  <p class="text-gray-400 text-lg leading-relaxed">Create data-driven dashboards and KPIs for accountability and impact tracking.
+                  <h4 class="text-lg font-semibold text-pff-black mb-2">Performance Monitoring & Evaluation (M&E)</h4>
+                  <p class="text-gray-600 text-lg leading-relaxed">Create data-driven dashboards and KPIs for accountability and impact tracking.
 </p>
                 </div>
               </div>
               <div class="flex items-start group">
                 <div class="w-3 h-3 bg-pff-red rounded-full mt-2 mr-4 flex-shrink-0 group-hover:scale-125 transition-transform duration-300"></div>
                 <div>
-                  <h4 class="text-lg font-semibold text-white mb-2">Risk & Compliance Management</h4>
-                  <p class="text-gray-400 text-lg leading-relaxed">Identify risks early and align mitigation measures with governance standards.
+                  <h4 class="text-lg font-semibold text-pff-black mb-2">Risk & Compliance Management</h4>
+                  <p class="text-gray-600 text-lg leading-relaxed">Identify risks early and align mitigation measures with governance standards.
 </p>
                 </div>
               </div>
               <div class="flex items-start group">
                 <div class="w-3 h-3 bg-pff-red rounded-full mt-2 mr-4 flex-shrink-0 group-hover:scale-125 transition-transform duration-300"></div>
                 <div>
-                  <h4 class="text-lg font-semibold text-white mb-2">Stakeholder Management</h4>
-                  <p class="text-gray-400 text-lg leading-relaxed">Multi-stakeholder coordination and communication</p>
+                  <h4 class="text-lg font-semibold text-pff-black mb-2">Stakeholder Management</h4>
+                  <p class="text-gray-600 text-lg leading-relaxed">Multi-stakeholder coordination and communication</p>
                 </div>
               </div>
             </div>
 
            
-            <p class="text-gray-400 text-lg italic">Institutions and project owners gain control, confidence, and consistency in delivering results that stand the test of scrutiny</p>
+            <p class="text-gray-600 text-lg italic">Institutions and project owners gain control, confidence, and consistency in delivering results that stand the test of scrutiny</p>
 
             <a href="contact.html" class="bg-pff-red text-white px-8 py-4 rounded-xl font-semibold hover:bg-red-700 transition-all duration-300 transform hover:scale-105 inline-block">Ensure Project Success</a>
           </div>
           <div class="relative">
-            <div class="bg-gradient-to-br from-gray-800 to-gray-900 rounded-3xl p-8 shadow-2xl border border-gray-700">
+            <div class="bg-gradient-to-br from-pff-red/10 via-pff-red/5 to-transparent rounded-3xl p-8 shadow-2xl border border-gray-700">
               <svg class="w-full h-auto" viewBox="0 0 400 300" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <rect x="50" y="50" width="300" height="200" rx="20" fill="#1f2937" stroke="#9E060C" stroke-width="2"/>
-                <rect x="80" y="80" width="240" height="40" rx="5" fill="#374151" stroke="#9E060C" stroke-width="1"/>
-                <rect x="80" y="140" width="240" height="40" rx="5" fill="#374151" stroke="#9E060C" stroke-width="1"/>
+                <rect x="50" y="50" width="300" height="200" rx="20" fill="#F5F5F5" stroke="#9E060C" stroke-width="2"/>
+                <rect x="80" y="80" width="240" height="40" rx="5" fill="#F5F5F5" stroke="#9E060C" stroke-width="1"/>
+                <rect x="80" y="140" width="240" height="40" rx="5" fill="#F5F5F5" stroke="#9E060C" stroke-width="1"/>
                 <circle cx="100" cy="100" r="5" fill="#9E060C"/>
                 <circle cx="100" cy="160" r="5" fill="#9E060C"/>
                 <text x="200" y="240" text-anchor="middle" class="text-white text-sm font-semibold">Project Oversight</text>
@@ -411,9 +496,9 @@ Our Project Governance & Advisory service helps clients manage multi-sector prog
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 3v2m6-2v2M9 19v2m6-2v2M5 9H3m2 6H3m18-6h-2m2 6h-2M7 19h10a2 2 0 002-2V7a2 2 0 00-2-2H7a2 2 0 00-2 2v10a2 2 0 002 2zM9 9h6v6H9V9z"></path>
                 </svg>
               </div>
-            <h3 class="text-3xl lg:text-4xl font-bold text-white leading-tight">Technology and Data Analytics</h3>
+            <h3 class="text-3xl lg:text-4xl font-bold text-pff-black leading-tight">Technology and Data Analytics</h3>
             </div>
-            <p class="text-gray-300 text-lg leading-relaxed">
+            <p class="text-gray-600 text-lg leading-relaxed">
              In today’s world, insight comes from data — but only when properly structured, interpreted, and visualized.
 Our Technology & Data Analytics service empowers clients to translate complex datasets into actionable intelligence for better decision-making, transparency, and performance tracking.
 
@@ -423,51 +508,51 @@ Our Technology & Data Analytics service empowers clients to translate complex da
               <div class="flex items-start group">
                 <div class="w-3 h-3 bg-pff-red rounded-full mt-2 mr-4 flex-shrink-0 group-hover:scale-125 transition-transform duration-300"></div>
                 <div>
-                  <h4 class="text-lg font-semibold text-white mb-2">Data Systems Design & Integration</h4>
-                  <p class="text-gray-400 text-lg leading-relaxed">Build secure, interoperable systems that unify financial and operational data.
+                  <h4 class="text-lg font-semibold text-pff-black mb-2">Data Systems Design & Integration</h4>
+                  <p class="text-gray-600 text-lg leading-relaxed">Build secure, interoperable systems that unify financial and operational data.
 </p>
                 </div>
               </div>
               <div class="flex items-start group">
                 <div class="w-3 h-3 bg-pff-red rounded-full mt-2 mr-4 flex-shrink-0 group-hover:scale-125 transition-transform duration-300"></div>
                 <div>
-                  <h4 class="text-lg font-semibold text-white mb-2">Analytics & Reporting Dashboards</h4>
-                  <p class="text-gray-400 text-lg leading-relaxed">Turn raw data into visual insights and performance metrics.
+                  <h4 class="text-lg font-semibold text-pff-black mb-2">Analytics & Reporting Dashboards</h4>
+                  <p class="text-gray-600 text-lg leading-relaxed">Turn raw data into visual insights and performance metrics.
 </p>
                 </div>
               </div>
               <div class="flex items-start group">
                 <div class="w-3 h-3 bg-pff-red rounded-full mt-2 mr-4 flex-shrink-0 group-hover:scale-125 transition-transform duration-300"></div>
                 <div>
-                  <h4 class="text-lg font-semibold text-white mb-2">Digital Transformation Strategy</h4>
-                  <p class="text-gray-400 text-lg leading-relaxed">Align technology adoption with business goals for efficiency and growth.
+                  <h4 class="text-lg font-semibold text-pff-black mb-2">Digital Transformation Strategy</h4>
+                  <p class="text-gray-600 text-lg leading-relaxed">Align technology adoption with business goals for efficiency and growth.
 </p>
                 </div>
               </div>
               <div class="flex items-start group">
                 <div class="w-3 h-3 bg-pff-red rounded-full mt-2 mr-4 flex-shrink-0 group-hover:scale-125 transition-transform duration-300"></div>
                 <div>
-                  <h4 class="text-lg font-semibold text-white mb-2">Cloud Infrastructure Advisory</h4>
-                  <p class="text-gray-400 text-lg leading-relaxed">Support migration, data protection, and continuity planning.
+                  <h4 class="text-lg font-semibold text-pff-black mb-2">Cloud Infrastructure Advisory</h4>
+                  <p class="text-gray-600 text-lg leading-relaxed">Support migration, data protection, and continuity planning.
 </p>
                 </div>
               </div>
             </div>
 
 
-            <p class="text-gray-400 text-lg italic">Clients achieve smarter, faster decisions through clear, accessible data — strengthening both governance and profitability.
+            <p class="text-gray-600 text-lg italic">Clients achieve smarter, faster decisions through clear, accessible data — strengthening both governance and profitability.
 
 </p>
 
             <a href="contact.html" class="bg-pff-red text-white px-8 py-4 rounded-xl font-semibold hover:bg-red-700 transition-all duration-300 transform hover:scale-105 inline-block">Unlock Your Data</a>
           </div>
           <div class="lg:order-1 relative">
-            <div class="bg-gradient-to-br from-gray-800 to-gray-900 rounded-3xl p-8 shadow-2xl border border-gray-700">
+            <div class="bg-gradient-to-br from-pff-red/10 via-pff-red/5 to-transparent rounded-3xl p-8 shadow-2xl border border-gray-700">
               <svg class="w-full h-auto" viewBox="0 0 400 300" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <rect x="50" y="50" width="300" height="200" rx="20" fill="#1f2937" stroke="#ffffff" stroke-width="2"/>
-                <rect x="100" y="100" width="60" height="80" rx="5" fill="#374151" stroke="#9E060C" stroke-width="1"/>
-                <rect x="180" y="120" width="60" height="60" rx="5" fill="#374151" stroke="#9E060C" stroke-width="1"/>
-                <rect x="260" y="110" width="60" height="70" rx="5" fill="#374151" stroke="#9E060C" stroke-width="1"/>
+                <rect x="50" y="50" width="300" height="200" rx="20" fill="#F5F5F5" stroke="#9E060C" stroke-width="2"/>
+                <rect x="100" y="100" width="60" height="80" rx="5" fill="#F5F5F5" stroke="#9E060C" stroke-width="1"/>
+                <rect x="180" y="120" width="60" height="60" rx="5" fill="#F5F5F5" stroke="#9E060C" stroke-width="1"/>
+                <rect x="260" y="110" width="60" height="70" rx="5" fill="#F5F5F5" stroke="#9E060C" stroke-width="1"/>
                 <path d="M160 140 L180 150" stroke="#9E060C" stroke-width="2"/>
                 <path d="M240 145 L260 145" stroke="#9E060C" stroke-width="2"/>
                 <text x="130" y="130" text-anchor="middle" class="text-sm  font-semibold fill-pff-black">Analyze</text>
@@ -483,13 +568,13 @@ Our Technology & Data Analytics service empowers clients to translate complex da
   </section>
 
   <!-- Public Sector and Institutional Consulting - Modern Tech Style -->
-  <section class="py-20 lg:py-32 bg-gradient-to-br from-slate-800 to-gray-900">
+  <section class="py-20 lg:py-32 bg-gradient-to-br from-pff-red/10 via-pff-red/5 to-transparent">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="text-center mb-24">
-        <h2 class="text-4xl lg:text-5xl font-bold text-white mb-8 leading-tight">
+        <h2 class="text-4xl lg:text-5xl font-bold text-pff-black mb-8 leading-tight">
           Public Sector & Institutional Consulting
         </h2>
-        <p class="text-lg text-gray-400 max-w-3xl mx-auto leading-relaxed">
+        <p class="text-lg text-gray-600 max-w-3xl mx-auto leading-relaxed">
           We collaborate with government entities, development partners, and policy institutions to design and implement reforms that improve governance, transparency, and service delivery.
 Our work supports fiscal discipline, institutional strengthening, and long-term performance improvement.
 
@@ -504,9 +589,9 @@ Our work supports fiscal discipline, institutional strengthening, and long-term 
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"></path>
               </svg>
             </div>
-            <h3 class="text-3xl lg:text-4xl font-bold text-white leading-tight">Public Financial Management (PFM) Reform</h3>
+            <h3 class="text-3xl lg:text-4xl font-bold text-pff-black leading-tight">Public Financial Management (PFM) Reform</h3>
           </div>
-          <p class="text-gray-300 text-lg leading-relaxed">
+          <p class="text-gray-600 text-lg leading-relaxed">
             Develop frameworks for budgeting, accounting, and auditing.
 
           </p>
@@ -515,45 +600,45 @@ Our work supports fiscal discipline, institutional strengthening, and long-term 
             <div class="flex items-start group">
               <div class="w-3 h-3 bg-pff-red rounded-full mt-2 mr-4 flex-shrink-0 group-hover:scale-125 transition-transform duration-300"></div>
               <div>
-                  <h4 class="text-lg font-semibold text-white mb-2">Institutional Capacity Building</h4>
-                <p class="text-gray-400 text-lg leading-relaxed">Design training programs and performance systems for civil service efficiency.
+                  <h4 class="text-lg font-semibold text-pff-black mb-2">Institutional Capacity Building</h4>
+                <p class="text-gray-600 text-lg leading-relaxed">Design training programs and performance systems for civil service efficiency.
 </p>
               </div>
             </div>
             <div class="flex items-start group">
               <div class="w-3 h-3 bg-pff-red rounded-full mt-2 mr-4 flex-shrink-0 group-hover:scale-125 transition-transform duration-300"></div>
               <div>
-                  <h4 class="text-lg font-semibold text-white mb-2">Policy Advisory</h4>
-                <p class="text-gray-400 text-lg leading-relaxed">Support evidence-based policy design and implementation</p>
+                  <h4 class="text-lg font-semibold text-pff-black mb-2">Policy Advisory</h4>
+                <p class="text-gray-600 text-lg leading-relaxed">Support evidence-based policy design and implementation</p>
               </div>
             </div>
             <div class="flex items-start group">
               <div class="w-3 h-3 bg-pff-red rounded-full mt-2 mr-4 flex-shrink-0 group-hover:scale-125 transition-transform duration-300"></div>
               <div>
-                  <h4 class="text-lg font-semibold text-white mb-2">Procurement Reform & Due Process Advisory</h4>
-                <p class="text-gray-400 text-lg leading-relaxed">Strengthen compliance and promote transparency in public contracting.</p>
+                  <h4 class="text-lg font-semibold text-pff-black mb-2">Procurement Reform & Due Process Advisory</h4>
+                <p class="text-gray-600 text-lg leading-relaxed">Strengthen compliance and promote transparency in public contracting.</p>
               </div>
             </div>
             <div class="flex items-start group">
               <div class="w-3 h-3 bg-pff-red rounded-full mt-2 mr-4 flex-shrink-0 group-hover:scale-125 transition-transform duration-300"></div>
               <div>
-                  <h4 class="text-lg font-semibold text-white mb-2">Development Partner Coordination</h4>
-                <p class="text-gray-400 text-lg leading-relaxed">Facilitate project alignment and accountability between state institutions and donor agencies.
+                  <h4 class="text-lg font-semibold text-pff-black mb-2">Development Partner Coordination</h4>
+                <p class="text-gray-600 text-lg leading-relaxed">Facilitate project alignment and accountability between state institutions and donor agencies.
 </p>
               </div>
             </div>
           </div>
 
-          <div class="bg-gradient-to-br from-gray-800 to-gray-900 p-8 rounded-2xl border border-gray-700">
-            <h4 class="text-2xl font-semibold text-white mb-6">Key Achievements</h4>
+          <div class="bg-gradient-to-br from-pff-red/10 via-pff-red/5 to-transparent p-8 rounded-2xl border border-gray-700">
+            <h4 class="text-2xl font-semibold text-pff-black mb-6">Key Achievements</h4>
             <div class="grid grid-cols-2 gap-8">
               <div class="text-center">
                 <div class="text-4xl font-bold text-pff-red mb-2">25+</div>
-                <div class="text-lg text-gray-400">Public institutions operate with improved efficiency</div>
+                <div class="text-lg text-gray-600">Public institutions operate with improved efficiency</div>
               </div>
               <div class="text-center">
                 <div class="text-4xl font-bold text-pff-red mb-2"></div>
-                <div class="text-lg text-gray-400">Resources are used effectively to achieve developmental impact
+                <div class="text-lg text-gray-600">Resources are used effectively to achieve developmental impact
 
 </div>
               </div>
@@ -561,11 +646,11 @@ Our work supports fiscal discipline, institutional strengthening, and long-term 
           </div>
         </div>
         <div class="relative">
-          <div class="bg-gradient-to-br from-gray-800 to-gray-900 rounded-3xl p-8 shadow-2xl border border-gray-700">
+          <div class="bg-gradient-to-br from-pff-red/10 via-pff-red/5 to-transparent rounded-3xl p-8 shadow-2xl border border-gray-700">
             <svg class="w-full h-auto" viewBox="0 0 400 300" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <rect x="50" y="50" width="300" height="200" rx="20" fill="#1f2937" stroke="#9E060C" stroke-width="2"/>
-              <rect x="80" y="80" width="240" height="40" rx="5" fill="#374151" stroke="#9E060C" stroke-width="1"/>
-              <rect x="80" y="140" width="240" height="40" rx="5" fill="#374151" stroke="#9E060C" stroke-width="1"/>
+              <rect x="50" y="50" width="300" height="200" rx="20" fill="#F5F5F5" stroke="#9E060C" stroke-width="2"/>
+              <rect x="80" y="80" width="240" height="40" rx="5" fill="#F5F5F5" stroke="#9E060C" stroke-width="1"/>
+              <rect x="80" y="140" width="240" height="40" rx="5" fill="#F5F5F5" stroke="#9E060C" stroke-width="1"/>
               <circle cx="100" cy="100" r="5" fill="#9E060C"/>
               <circle cx="100" cy="160" r="5" fill="#9E060C"/>
               <text x="200" y="240" text-anchor="middle" class="text-white text-sm font-semibold">Government Services</text>
@@ -576,9 +661,9 @@ Our work supports fiscal discipline, institutional strengthening, and long-term 
 
       <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
         <div class="relative">
-          <div class="bg-gradient-to-br from-gray-800 to-gray-900 rounded-3xl p-8 shadow-2xl border border-gray-700">
+          <div class="bg-gradient-to-br from-pff-red/10 via-pff-red/5 to-transparent rounded-3xl p-8 shadow-2xl border border-gray-700">
             <svg class="w-full h-auto" viewBox="0 0 400 300" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <rect x="50" y="50" width="300" height="200" rx="20" fill="#1f2937" stroke="#9E060C" stroke-width="2"/>
+              <rect x="50" y="50" width="300" height="200" rx="20" fill="#F5F5F5" stroke="#9E060C" stroke-width="2"/>
               <path d="M100 100 L150 150 L200 120 L250 180 L300 140" stroke="#9E060C" stroke-width="3" fill="none"/>
               <circle cx="150" cy="150" r="4" fill="#9E060C"/>
               <circle cx="250" cy="180" r="4" fill="#9E060C"/>
@@ -593,9 +678,9 @@ Our work supports fiscal discipline, institutional strengthening, and long-term 
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path>
               </svg>
             </div>
-            <h3 class="text-3xl lg:text-4xl font-bold text-white leading-tight">Development Partner Services</h3>
+            <h3 class="text-3xl lg:text-4xl font-bold text-pff-black leading-tight">Development Partner Services</h3>
           </div>
-          <p class="text-gray-300 text-lg leading-relaxed">
+          <p class="text-gray-600 text-lg leading-relaxed">
             We work with international development organizations, NGOs, and donor agencies to ensure 
             effective program implementation, compliance, and measurable impact.
           </p>
@@ -604,43 +689,43 @@ Our work supports fiscal discipline, institutional strengthening, and long-term 
             <div class="flex items-start group">
               <div class="w-3 h-3 bg-pff-red rounded-full mt-2 mr-4 flex-shrink-0 group-hover:scale-125 transition-transform duration-300"></div>
               <div>
-                  <h4 class="text-lg font-semibold text-white mb-2">Program Governance</h4>
-                <p class="text-gray-400 text-lg leading-relaxed">Multi-donor program oversight and compliance monitoring</p>
+                  <h4 class="text-lg font-semibold text-pff-black mb-2">Program Governance</h4>
+                <p class="text-gray-600 text-lg leading-relaxed">Multi-donor program oversight and compliance monitoring</p>
               </div>
             </div>
             <div class="flex items-start group">
               <div class="w-3 h-3 bg-pff-red rounded-full mt-2 mr-4 flex-shrink-0 group-hover:scale-125 transition-transform duration-300"></div>
               <div>
-                  <h4 class="text-lg font-semibold text-white mb-2">Results Measurement</h4>
-                <p class="text-gray-400 text-lg leading-relaxed">Impact assessment and results-based management</p>
+                  <h4 class="text-lg font-semibold text-pff-black mb-2">Results Measurement</h4>
+                <p class="text-gray-600 text-lg leading-relaxed">Impact assessment and results-based management</p>
               </div>
             </div>
             <div class="flex items-start group">
               <div class="w-3 h-3 bg-pff-red rounded-full mt-2 mr-4 flex-shrink-0 group-hover:scale-125 transition-transform duration-300"></div>
               <div>
-                  <h4 class="text-lg font-semibold text-white mb-2">Donor Compliance</h4>
-                <p class="text-gray-400 text-lg leading-relaxed">Financial management and reporting for donor requirements</p>
+                  <h4 class="text-lg font-semibold text-pff-black mb-2">Donor Compliance</h4>
+                <p class="text-gray-600 text-lg leading-relaxed">Financial management and reporting for donor requirements</p>
               </div>
             </div>
             <div class="flex items-start group">
               <div class="w-3 h-3 bg-pff-red rounded-full mt-2 mr-4 flex-shrink-0 group-hover:scale-125 transition-transform duration-300"></div>
               <div>
-                  <h4 class="text-lg font-semibold text-white mb-2">Sustainability Planning</h4>
-                <p class="text-gray-400 text-lg leading-relaxed">Long-term sustainability and exit strategy development</p>
+                  <h4 class="text-lg font-semibold text-pff-black mb-2">Sustainability Planning</h4>
+                <p class="text-gray-600 text-lg leading-relaxed">Long-term sustainability and exit strategy development</p>
               </div>
             </div>
           </div>
 
-          <div class="bg-gradient-to-br from-gray-800 to-gray-900 p-8 rounded-2xl border border-gray-700">
-            <h4 class="text-2xl font-semibold text-white mb-6">Development Impact</h4>
+          <div class="bg-gradient-to-br from-pff-red/10 via-pff-red/5 to-transparent p-8 rounded-2xl border border-gray-700">
+            <h4 class="text-2xl font-semibold text-pff-black mb-6">Development Impact</h4>
             <div class="grid grid-cols-2 gap-8">
               <div class="text-center">
                 <div class="text-4xl font-bold text-pff-red mb-2">$50M</div>
-                <div class="text-sm text-gray-400">Programs Managed</div>
+                <div class="text-sm text-gray-600">Programs Managed</div>
               </div>
               <div class="text-center">
                 <div class="text-4xl font-bold text-pff-red mb-2">98%</div>
-                <div class="text-sm text-gray-400">Compliance Rate</div>
+                <div class="text-sm text-gray-600">Compliance Rate</div>
               </div>
             </div>
           </div>
@@ -650,48 +735,48 @@ Our work supports fiscal discipline, institutional strengthening, and long-term 
   </section>
 
   <!-- Closing Section - Modern Tech Style -->
-  <section class="py-20 lg:py-32 bg-gradient-to-br from-black to-slate-900">
+  <section class="py-20 lg:py-32 bg-gradient-to-br from-pff-red/10 via-pff-red/5 to-transparent">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="text-center max-w-5xl mx-auto">
-        <h2 class="text-4xl lg:text-6xl font-bold text-white mb-12 leading-tight">
+        <h2 class="text-4xl lg:text-6xl font-bold text-pff-black mb-12 leading-tight">
           Integrated Expertise. Lasting Results.
 
         </h2>
-        <p class="text-lg text-gray-400 mb-16 leading-relaxed">
+        <p class="text-lg text-gray-600 mb-16 leading-relaxed">
          At PFF Consulting, every engagement combines analytical depth with implementation discipline.
 We partner with clients not only to design solutions but to ensure those solutions work — sustainably, transparently, and with measurable results.
 
         </p>
         
         <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
-          <div class="text-center p-8 bg-gradient-to-br from-gray-800 to-gray-900 rounded-2xl border border-gray-700 group hover:border-pff-red transition-all duration-300">
+          <div class="text-center p-8 bg-gradient-to-br from-pff-red/10 via-pff-red/5 to-transparent rounded-2xl border border-gray-700 group hover:border-pff-red transition-all duration-300">
             <div class="w-20 h-20 bg-gradient-to-br from-pff-red/10 to-pff-red/5 rounded-full flex items-center justify-center mx-auto mb-6 shadow-lg">
               <svg class="w-10 h-10 text-pff-red" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
               </svg>
             </div>
-            <h3 class="text-2xl font-bold text-white mb-4">Proven Results</h3>
-            <p class="text-gray-400 text-lg leading-relaxed">15+ successful projects with measurable impact across Africa</p>
+            <h3 class="text-2xl font-bold text-pff-black mb-4">Proven Results</h3>
+            <p class="text-gray-600 text-lg leading-relaxed">15+ successful projects with measurable impact across Africa</p>
           </div>
           
-          <div class="text-center p-8 bg-gradient-to-br from-gray-800 to-gray-900 rounded-2xl border border-gray-700 group hover:border-pff-red transition-all duration-300">
+          <div class="text-center p-8 bg-gradient-to-br from-pff-red/10 via-pff-red/5 to-transparent rounded-2xl border border-gray-700 group hover:border-pff-red transition-all duration-300">
             <div class="w-20 h-20 bg-gradient-to-br from-pff-red/10 to-pff-red/5 rounded-full flex items-center justify-center mx-auto mb-6 shadow-lg">
               <svg class="w-10 h-10 text-pff-red" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"></path>
               </svg>
             </div>
-            <h3 class="text-2xl font-bold text-white mb-4">Expert Team</h3>
-            <p class="text-gray-400 text-lg leading-relaxed">Certified professionals with deep sector expertise and local knowledge</p>
+            <h3 class="text-2xl font-bold text-pff-black mb-4">Expert Team</h3>
+            <p class="text-gray-600 text-lg leading-relaxed">Certified professionals with deep sector expertise and local knowledge</p>
           </div>
           
-          <div class="text-center p-8 bg-gradient-to-br from-gray-800 to-gray-900 rounded-2xl border border-gray-700 group hover:border-pff-red transition-all duration-300">
+          <div class="text-center p-8 bg-gradient-to-br from-pff-red/10 via-pff-red/5 to-transparent rounded-2xl border border-gray-700 group hover:border-pff-red transition-all duration-300">
             <div class="w-20 h-20 bg-gradient-to-br from-pff-red/10 to-pff-red/5 rounded-full flex items-center justify-center mx-auto mb-6 shadow-lg">
               <svg class="w-10 h-10 text-pff-red" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
               </svg>
             </div>
-            <h3 class="text-2xl font-bold text-white mb-4">Lasting Impact</h3>
-            <p class="text-gray-400 text-lg leading-relaxed">Solutions that create sustainable value long after project completion</p>
+            <h3 class="text-2xl font-bold text-pff-black mb-4">Lasting Impact</h3>
+            <p class="text-gray-600 text-lg leading-relaxed">Solutions that create sustainable value long after project completion</p>
           </div>
         </div>
 
@@ -852,11 +937,11 @@ We partner with clients not only to design solutions but to ensure those solutio
       window.addEventListener('scroll', function() {
         const navbar = document.getElementById('navbar');
         if (window.scrollY > 50) {
-          navbar.classList.add('bg-black/95', 'shadow-2xl');
-          navbar.classList.remove('bg-black/90');
+          navbar.classList.add('bg-white/98', 'shadow-2xl');
+          navbar.classList.remove('bg-white/95');
         } else {
-          navbar.classList.remove('bg-black/95', 'shadow-2xl');
-          navbar.classList.add('bg-black/90');
+          navbar.classList.remove('bg-white/98', 'shadow-2xl');
+          navbar.classList.add('bg-white/95');
         }
       });
     });
